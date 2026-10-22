@@ -881,7 +881,7 @@ No database. Outputs are files: \texttt{reports/report.html}, \texttt{reports/co
 \subsection{Class Diagram}
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[node distance=0.8cm and 1.0cm, every node/.style={font=\scriptsize}]
+\begin{tikzpicture}[node distance=0.8cm and 2.4cm, every node/.style={font=\scriptsize}]
   \node[draw, rectangle, align=left] (lp) {\textbf{LoginPage}\\ \hrulefill\\ USERNAME\_INPUT, PASSWORD\_INPUT\\ LOGIN\_BTN, ERROR\\ \hrulefill\\ + open()\\ + login(user, pwd): InventoryPage\\ + error\_message()};
   \node[draw, rectangle, align=left, right=of lp] (ip) {\textbf{InventoryPage}\\ \hrulefill\\ NAMES, PRICES, SORT, BADGE\\ \hrulefill\\ + product\_names(), product\_prices()\\ + sort\_by(value)\\ + add\_to\_cart(slug), remove\_from\_cart(slug)\\ + cart\_count()\\ + go\_to\_cart(): CartPage\\ + logout(): LoginPage};
   \node[draw, rectangle, align=left, below=of ip] (cp) {\textbf{CartPage}\\ \hrulefill\\ ITEM\_NAMES, CHECKOUT\\ \hrulefill\\ + item\_names()\\ + remove(slug)\\ + checkout(): CheckoutPage};
